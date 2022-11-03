@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API experiment</title>
+
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://kit.fontawesome.com/c3cb13092e.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="circle"></div>
+
+    <div class="container">
+        <div class="image"></div>
+        <div class="data">
+            <div class="search-area">
+                <input type="text" name="city-input" id="city-input" placeholder="Ange en stad...">
+                <!-- <input type="button" value="Sök" id="city-confirm"> 
+                 -->
+                 <div class="buttons" id="city-confirm" tabindex="0">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="buttons" id="location" title="Test" tabindex="0">
+                    <i class="fa-solid fa-location-arrow"></i>
+                </div>
+            </div>
+            <div class="weather-data">
+                <h1 class="city">Stockholm</h1>
+                <div id="temp" class="temp"></div>
+                <div class="weather"></div> 
+                <i class="fa-solid fa-arrow-up-long rotate"></i>
+            </div>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html> 

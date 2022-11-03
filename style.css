@@ -1,0 +1,203 @@
+:root{
+
+    --std-width: 30vw;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    /* cursor: none; */
+    margin: 0;
+    padding-top: 5rem;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+    width: 100vw;
+    height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+
+    overflow: hidden;
+}
+
+.pointer{
+    position: absolute;
+
+    height: 5px;
+    width: 5px;
+
+    top: 0;
+    left: 0;
+
+    background: red;
+
+    transform: translate(0%, 0%) scale(1);
+
+    z-index: 500;
+
+}
+
+.circle{
+ 
+    position: absolute;
+    height: 300vh;
+    width: 300vw;
+  
+    background: radial-gradient(circle, #0093E9 0%, #80D0C7 100%);
+    /* background: radial-gradient(circle, #9ebd13, #008552, #2c5364); */
+  /*   background: url(https://wallup.net/wp-content/uploads/2017/03/28/341875-forest-mist.jpg); */
+    
+    
+    cursor: none;
+    
+    
+    translate: 0vw 0vh;
+  
+    top: 0;
+    
+    transform: translate(-50%, -50%) scale(3);
+    
+    z-index: -1;
+    
+  
+  }
+
+.container {
+    display: relative;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+
+    margin: 0rem auto;
+
+    width: var(--std-width);
+    min-width: 300px;
+    max-width: 400px;
+
+    /* padding-top: rem; */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1em;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.data{
+    padding: 2rem;
+    color: whitesmoke;
+}
+
+
+.image{
+
+    /* margin: 0 auto; */
+    /* border-radius: 2em 2em 0 0; */
+
+    background-image: url('https://source.unsplash.com/random/100/?stockholm,skyline');
+    background-size: cover;
+    background-position: center;
+
+    /* width: var(--std-width); */
+    width: 100%;
+    height: 150px;
+}
+
+
+.fa-arrow-up-long{
+    transform: rotate(0deg);
+    transition: 3s;
+    
+    color: whitesmoke;
+    
+    position: absolute;
+    right: 15%;
+    bottom: 15%;
+
+    font-size: 5rem;
+    
+    
+    
+    transition-timing-function: cubic-bezier(.9,-0.48,.08,1.38);
+}
+
+.search-area{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .75rem;
+}
+
+.search-area > * {
+      
+    border: 0;
+    height: 3rem;
+    border-radius: .5em;
+
+    box-shadow: 0 .5rem 1rem -.5rem rgba(0, 0, 0, 0.1);
+
+    background: white;
+
+    color: black;
+
+    width: 100%;
+
+}
+.city{
+    /* grid-column: 1 / span 3; */
+}
+
+.temp{
+    cursor: pointer;
+
+    font-size: 5rem;
+}
+
+.weather-data{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+}
+
+
+#city-input{
+    grid-column: 1 / span 4;
+
+    padding: 1rem;
+
+    font-size: 1rem;
+}
+
+
+#city-input:focus#city-input::placeholder{
+    opacity: 0;
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.buttons:first-of-type{
+    grid-column: 1 / span 3;
+}
+
+.buttons:active{
+    box-shadow: 0 0 1rem -.5rem rgba(0, 0, 0, 0.1),
+                inset .1rem .5rem .5rem -.5rem rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
