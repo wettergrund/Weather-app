@@ -42,6 +42,10 @@ let myWeather = {
             document.querySelector(".city").innerText = "Something went wrong";
         }
         else{
+            const windDir = document.querySelector(".rotate");
+            
+    
+
             const { name } = data;
             const { description, icon } = data.weather[0];
             const { temp } = data.main;
@@ -50,7 +54,6 @@ let myWeather = {
             const flooredTemp = Math.round(temp);
 
             console.log(name, description, temp, flooredTemp);
-            const windDir = document.querySelector(".rotate");
 
             document.querySelector(".city").innerText = name;
             document.querySelector(".temp").innerText = flooredTemp + '°' + degChar;
